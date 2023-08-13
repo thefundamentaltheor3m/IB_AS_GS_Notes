@@ -1,0 +1,152 @@
+\section{Arithmetic Sequences}
+
+\subsection{What is an Arithmetic Sequence?}
+
+\begin{definition}[Arithmetic Sequence]
+    We say that a sequence $\parenth{a_n}_{n=1}^{\infty}$ is an \textbf{arithmetic sequence} if there is some number $d$, known as the \textbf{common difference}, such that for all $n \in \N$,
+    \begin{align}
+        a_{n+1} &= a_n + d
+    \end{align}
+    In other words, adding $d$ to any term in the sequence gives the next term.
+\end{definition}
+
+\begin{boxexercise}[An Equivalent Characterisation]
+Let $\an$ be an arithmetic sequence. Show that the $n$th term $a_n$ of the sequence is given by
+\begin{align}
+    a_n = a_1 + d \cdot \parenth{n - 1}
+\end{align}
+\end{boxexercise}
+
+\subsection{Examples of Arithmetic Sequences}
+
+Arithmetic sequences appear everywhere, and we are already used to working with them, even if we may not realise it.
+
+\begin{example}
+We already know of the following arithmetic sequences:
+\begin{enumerate}[noitemsep]
+    \item The sequence natural numbers $1,2,3,4,5,6,\ldots$ form an arithmetic sequence with first term $1$ and common difference $1$.\footnote{Formally speaking, this isn't quite true: the sequence itself is the \textit{map} $a_n = n$ that corresponds to the trivial inclusion map from $\N$ to $\R$ that sends every element of $\N$ to itself. We have essentially identified each sequence with its elements, as we are more interested in those than the maps themselves.}
+    \item The two-times-table $2, 4, 6, 8, 10, 12, \ldots$ is an arithmetic sequence with first term $2$ and common difference $2$. Indeed, an analogous result is true for \textit{any} multiplication table.
+    \item The odd numbers $1, 3, 5, 7, 9, 11, \ldots$ is also an arithmetic sequence with first term $1$ and common difference $2$.
+\end{enumerate}
+\end{example}
+
+Given two terms of an arithmetic sequence, it is easy to compute the common difference $d$ by looking at the \textbf{number of differences} separating the two terms. For example:
+
+\begin{boxexample}
+Let $\an$ be an arithmetic sequence with $a_2 = 5$ and $a_5 = 14$. Find the common difference of the sequence.
+\begin{solution}
+Since $a_2$ and $a_5$ are $5 - 2 = 3$ terms apart, adding $d$ to $a_2$ three times should give $a_5$. In other words,
+\begin{align*}
+    5 + 3d &= 14 \\
+    \iff \quad \quad \quad \quad d &= \frac{14 - 5}{3} \\
+    &= 3
+\end{align*}
+\end{solution}
+\vspace{-3em}
+\end{boxexample}
+
+Try the following yourself.
+
+\begin{boxexercise}
+Let $\an$ be an arithmetic sequence. In each of the following cases, find the common difference and the first term.
+\begin{enumerate}[noitemsep]
+    \item $a_5 = 10$, $a_{45} = 90$
+    \item $a_3 = 2$, $a_7 = 4$
+    \item $a_{365} = 364$, $a_{1001001} = 1001000$
+\end{enumerate}
+\end{boxexercise}
+
+\subsection{Sum of $n$ Terms of an Arithmetic Sequence}
+
+It turns out that there is a rather ingenious trick to sum the first $n$ terms of an arithmetic sequence.
+
+\begin{boxexample}[Gauss] \label{eg:Gauss_sum}
+    It is said that the renowned German mathematician, Carl Friedrich Gauss, came up with the following trick as a child when his teacher asked him to add the first $100$ natural numbers as a punishment for misbehaving in class. \\
+
+    He first wrote down the numbers like so:
+    \begin{align*}
+        \begin{matrix}
+            S & = & 1 & + & 2 & + & 3 & + & \cdots & + & 98 & + & 99 & + & 100
+        \end{matrix}
+    \end{align*}
+    Then, he wrote another copy below, like so:
+    \begin{align*}
+        \begin{matrix}
+            S & = & 1 & + & 2 & + & 3 & + & \cdots & + & 98 & + & 99 & + & 100 \\
+            S & = & 100 & + & 99 & + & 98 & + & \cdots & + & 3 & + & 2 & + & 1
+        \end{matrix}
+    \end{align*}
+    Then, he added the numbers column-wise:
+    \begin{align*}
+        \begin{matrix}
+            S & = & 1 & + & 2 & + & 3 & + & \cdots & + & 98 & + & 99 & + & 100 \\
+            S & = & 100 & + & 99 & + & 98 & + & \cdots & + & 3 & + & 2 & + & 1 \\
+            \hline
+            2S & = & 101 & + & 101 & + & 101 & + & \cdots & + & 101 & + & 101 & + & 101
+        \end{matrix}
+    \end{align*}
+    In other words, $2S = 101 \times 100$, meaning $S = 5050$.
+\end{boxexample}
+If you pay close attention to Gauss's method, there is nothing particularly special about the first $100$ natural numbers. They can just as easily be replaced by any other sequence, as we shall soon see.
+
+\begin{boxexercise}\label{ex:AS_first_pl_last}
+    Let $\an$ be an arithmetic sequence and let $n$ be any natural number. Show that for any natural number $j$ lying between $1$ and $n$ (inclusive),
+    \begin{align}
+        a_j + a_{n-j+1} &= a_1 + a_n \label{eq:AS_first_pl_last}
+    \end{align}
+\end{boxexercise}
+
+We therefore have the following result:
+\begin{theorem}
+Let $\an$ be an arithmetic sequence. Let
+\begin{align}
+    S_n &:= \sum_{j=1}^{n} a_j
+\end{align}
+denote the sum of the first $n$ terms of $\an$---in other words, $S_n = a_1 + a_2 + \cdots + a_n$. Then, we have
+\begin{align}
+    S_n &= \frac{n}{2}\parenth{a_1 + a_n} \label{eq:AS_sum_form}
+\end{align}
+\end{theorem}
+\begin{proof}
+    We use the same argument as Example \ref{eg:Gauss_sum}:
+    \begin{align*}
+    \begin{matrix}
+        S_n & = & a_1 & + & a_2 & + & 3 & + & \cdots & + & a_{n-2} & + & a_{n-1} & + & a_n \\
+        S_n & = & a_n & + & a_{n-1} & + & a_{n-2} & + & \cdots & + & a_3 & + & a_2 & + & a_1 \\
+        \hline
+        2S_n & = & \parenth{a_1 + a_n} & + & \parenth{a_1 + a_n} & + & \parenth{a_1 + a_n} & + & \cdots & + & \parenth{a_1 + a_n} & + & \parenth{a_1 + a_n} & + & \parenth{a_1 + a_n}
+    \end{matrix}
+    \end{align*}
+    where the last line follows from Exercise \ref{ex:AS_first_pl_last}.
+    
+    Therefore,
+    \begin{align*}
+        2S_n &= n\parenth{a_1 + a_n} \\
+        \iff \quad \quad S_n &= \frac{n}{2}\parenth{a_1 + a_n}
+    \end{align*}
+    as required.
+\end{proof}
+Hereafter, we will discard the summation notation and instead use $S_n$ to denote the sum of the first $n$ terms of a given sequence.
+
+Sometimes, we do not know what the $n$th term of some sequence is. Therefore, the following equivalent formula, which is easily derived, is quite useful.
+\begin{boxexercise}[An Equivalent Formula]
+Let $\an$ be an arithmetic sequence with common difference $d$. Then,
+\begin{align}
+    S_n &= \frac{n}{2}\parenth{2a_1 + d\parenth{n-1}}
+\end{align}
+\end{boxexercise}
+It is common to be asked questions involving adding up terms of a sequence whose $n$th term formula is not explicitly given. In such cases, one simply needs to find the first term and common difference and apply the formula. Once one gets more comfortable with arithmetic sequences, one will start seeing patterns more intuitively, and be able to add up terms more easily. The key for this is, of course, \textbf{practice}.
+\begin{boxexercise}
+    Let $\an$ be an arithmetic sequence. In each of the following cases, find the sum of the first $n$ terms.
+    \begin{enumerate}[noitemsep]
+        \item $a_1 = 20$, $d = 3$, $n = 10$
+        \item $a_1 = 3$, $a_6 = 101$, $n = 6$
+        \item $a_5 = 49$, $a_{7} = 51$, $n = 11$
+        \item $a_4 = 14$, $a_6 = 22$, $n = 15$
+    \end{enumerate}
+    \textit{Hint: The formula \eqref{eq:AS_sum_form} can be rewritten as
+    \begin{align*}
+        S_n &= n\parenth{\frac{a_1 + a_n}{2}}   
+    \end{align*}
+    Is this a more helpful form? Think about the quantity in parentheses.}
+\end{boxexercise}
