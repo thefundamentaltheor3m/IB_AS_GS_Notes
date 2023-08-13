@@ -71,12 +71,13 @@
 \newtheorem{algorithm}[theorem]{Algorithm}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{example}[theorem]{Example}
+\newtheorem{wexample}[theorem]{Worked Example}
 \newtheorem{exercise}[theorem]{Exercise}
 \newtheorem*{claim*}{Claim}
 \newenvironment{boxexample}{
-    \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]\begin{example}
+    \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]\begin{wexample}
 }{
-    \end{example}\end{tcolorbox}
+    \end{wexample}\end{tcolorbox}
 }
 \newenvironment{boxexercise}{
     \begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black]\begin{exercise}
@@ -85,8 +86,19 @@
 }
 \newenvironment{solution}{\begin{proof}[Solution]\renewcommand{\qedsymbol}{}}{\end{proof}}
 
-\theoremstyle{remark}
+\newtheoremstyle{hint}
+    {\dimexpr\topsep/2\relax} % space above
+    {\dimexpr\topsep/2\relax} % space below
+    {\it}          % body font
+    {}          % indent amount
+    {\it} % theorem head font
+    {:}         % punctuation after theorem head
+    {.5em}      % space after theorem head
+    {}          % theorem hed spec. (empty = "normal")
+
+\theoremstyle{hint}
 \newtheorem*{remark}{Remark}
+\newtheorem*{hint}{Hint}
 
 % Structure and Numbering
 

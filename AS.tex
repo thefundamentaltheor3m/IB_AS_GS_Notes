@@ -13,7 +13,7 @@
 \begin{boxexercise}[An Equivalent Characterisation]
 Let $\an$ be an arithmetic sequence. Show that the $n$th term $a_n$ of the sequence is given by
 \begin{align}
-    a_n = a_1 + d \cdot \parenth{n - 1}
+    a_n = a_1 + d \cdot \parenth{n - 1} \label{eq:AS_nth_term}
 \end{align}
 \end{boxexercise}
 
@@ -58,7 +58,7 @@ Let $\an$ be an arithmetic sequence. In each of the following cases, find the co
 
 \subsection{Sum of $n$ Terms of an Arithmetic Sequence}
 
-It turns out that there is a rather ingenious trick to sum the first $n$ terms of an arithmetic sequence.
+It turns out that there is a rather ingenious trick to sum the first $n$ terms of an arithmetic sequence. Consider the following example to compute the first $100$ terms of $1, 2, 3, 4, \ldots$ (ie, the natural numbers), an arithmetic sequence with first term $1$ and difference $1$.
 
 \begin{boxexample}[Gauss] \label{eg:Gauss_sum}
     It is said that the renowned German mathematician, Carl Friedrich Gauss, came up with the following trick as a child when his teacher asked him to add the first $100$ natural numbers as a punishment for misbehaving in class. \\
@@ -87,13 +87,22 @@ It turns out that there is a rather ingenious trick to sum the first $n$ terms o
     \end{align*}
     In other words, $2S = 101 \times 100$, meaning $S = 5050$.
 \end{boxexample}
-If you pay close attention to Gauss's method, there is nothing particularly special about the first $100$ natural numbers. They can just as easily be replaced by any other sequence, as we shall soon see.
+
+The heart and soul of Gauss's argument is the fact that these ``complementary terms'' $1$ and $100$, $2$ and $99$, and so on---that is, $j$ and $n - j + 1$ for every $j \in \N$ with $1 \leq j \leq 100$---add up to the same number, namely $101$. It turns out that a similar result is true of \textit{all} arithmetic sequences, allowing us to generalise Gauss's argument.
 
 \begin{boxexercise}\label{ex:AS_first_pl_last}
-    Let $\an$ be an arithmetic sequence and let $n$ be any natural number. Show that for any natural number $j$ lying between $1$ and $n$ (inclusive),
+    Let $\an$ be an arithmetic sequence and let $n$ be any natural number. Show that for any $j \in \N$ such that $1 \leq j \leq n$,
     \begin{align}
         a_j + a_{n-j+1} &= a_1 + a_n \label{eq:AS_first_pl_last}
     \end{align}
+
+    \begin{remark}
+        While this is easily proved by substituting appropriately into the formula \eqref{eq:AS_nth_term}, it is instructive to instead think about the equivalent statement
+    \begin{align*}
+        \frac{a_j + a_{n-j+1}}{2} &= \frac{a_1 + a_n}{2} \label{eq:AS_first_pl_last}
+    \end{align*}
+    This result is obvious when $a_n = n$, ie, when you just think about the $j$th and $\parenth{n-j+1}$th natural numbers instead of those terms in the sequence. It is precisely the arithmeticity of the sequence that allows us to use the natural number formulation and the sequence formulation interchangeably---in this case, at least.
+    \end{remark}
 \end{boxexercise}
 
 We therefore have the following result:
@@ -135,7 +144,7 @@ Let $\an$ be an arithmetic sequence with common difference $d$. Then,
     S_n &= \frac{n}{2}\parenth{2a_1 + d\parenth{n-1}}
 \end{align}
 \end{boxexercise}
-It is common to be asked questions involving adding up terms of a sequence whose $n$th term formula is not explicitly given. In such cases, one simply needs to find the first term and common difference and apply the formula. Once one gets more comfortable with arithmetic sequences, one will start seeing patterns more intuitively, and be able to add up terms more easily. The key for this is, of course, \textbf{practice}.
+Once one gets more comfortable with arithmetic sequences, one will start seeing patterns more intuitively, and be able to add up terms more easily. The key for this is, of course, \textbf{practice}.
 \begin{boxexercise}
     Let $\an$ be an arithmetic sequence. In each of the following cases, find the sum of the first $n$ terms.
     \begin{enumerate}[noitemsep]
@@ -144,9 +153,13 @@ It is common to be asked questions involving adding up terms of a sequence whose
         \item $a_5 = 49$, $a_{7} = 51$, $n = 11$
         \item $a_4 = 14$, $a_6 = 22$, $n = 15$
     \end{enumerate}
-    \textit{Hint: The formula \eqref{eq:AS_sum_form} can be rewritten as
-    \begin{align*}
-        S_n &= n\parenth{\frac{a_1 + a_n}{2}}   
-    \end{align*}
-    Is this a more helpful form? Think about the quantity in parentheses.}
+    \begin{hint}
+        The formula \eqref{eq:AS_sum_form} can be rewritten as
+        \begin{align*}
+            S_n &= n\parenth{\frac{a_1 + a_n}{2}}   
+        \end{align*}
+        Is this a more helpful form? Think about the quantity in parentheses.
+    \end{hint}
 \end{boxexercise}
+
+We are now ready to move onto Geometric Sequences.
