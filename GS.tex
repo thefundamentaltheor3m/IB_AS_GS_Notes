@@ -17,14 +17,32 @@ In other words, multiplying any term in the sequence by $r$ gives the next term.
     \end{align}
 \end{boxexercise}
 
+Observe the following.
+\begin{boxhexercise} Let $\an$ be a geometric sequence with common ratio $r$. Show the following:
+\begin{enumerate}
+    \item If any term is zero (ie, if $a_j = 0$ for some $j \in \N$), then \textit{every} term (except maybe $a_1$) is zero. In particular, every term after the $j$th term is zero.
+    \item If $r = 1$, then the sequence is constant (ie, all the terms are equal).
+\end{enumerate}
+\end{boxhexercise}
+
+Thus, if $\an$ is a geometric sequence with nonzero terms, we can see that for all $n \in \N$,
+\begin{align}
+    \frac{a_{n+2}}{a_{n+1}} &= \frac{a_{n+1}}{a_n}
+\end{align}
+Indeed, the ratio of any two successive terms is equal (and indeed, equal to $r$). This is a nice way to check if a sequence is geometric: if you have two pairs of consecutive terms whose ratios are not equal, then the sequence cannot be geometric in nature.
+
 \subsection{Examples of Geometric Sequences}
 
 Geometric Sequences are as common as arithmetic sequences, and again, we have all seen them in numerous forms, even if we have not always realised it.
 
 \begin{example}
     Each of the following is an example of a geometric sequence.\footnote{As with Arithmetic Sequences, we do not distinguish the sequences (ie, the respective $\N \to \R$ maps) from their terms.}
-    \begin{enumerate}
-        \item 
+    \begin{enumerate}[noitemsep]
+        \item $3,6,12,24,\ldots$ form a geometric sequence with first term $3$ and common ratio $2$.
+        \item $1,3,9,27,\ldots$ (ie, the powers of $3$) form a geometric sequence with first term $1$ and common ratio $3$. (Indeed, the powers of any number $x$ form a geometric sequence with first term $1$, corresponding to the zeroth power, and common ratio $x$.)
+        \item $0,0,0,0,\ldots$ form a geometric sequence with first term $0$ and arbitrary common ratio.
+        \item For any number $x \in \R$, the sequence $x,x,x,x,\ldots$ is geometric, with first term $x$ and common ratio $1$.
+        \item $1,0,0,0,\ldots$ form a geometric sequence with first term $1$ and common ratio $0$.
     \end{enumerate}
 \end{example}
 
@@ -38,3 +56,35 @@ Geometric Sequences are as common as arithmetic sequences, and again, we have al
     \end{hint}
 \end{enumerate}
 \end{boxhexercise}
+
+\begin{remark}
+    Usually, in the IB, we deal only with ``interesting'' geometric sequences. That is, $r$ is usually taken to not be equal to $0$, $1$ or $-1$. However, personally, I find these cases to be more interesting...
+\end{remark}
+
+In terms of exams, one can expect to see similar types of questions for arithmetic and geometric sequences.
+\begin{boxexample}
+    Let $\an$ be a geometric sequence with common ratio $r$. Given that $a_2 = 10$ and $a_5 = 80$, find $a_7$.
+    \begin{solution}
+        Since $a_5$ is $5 - 2 = 3$ terms away from $a_2$, one needs to multiply $a_2$ by $r$ \textit{thrice} to get from $a_2$ to $a_5$. In mathematical terms, we have
+        \begin{align*}
+            && a_5 &= a_2 \cdot r \cdot r \cdot r &&& \\
+            &\iff& r^3 &= \frac{80}{10} = 8 &&& \\
+            &\ergo& r &= \cbrt{8} = 2
+        \end{align*}
+        Therefore, since $a_7$ is $7 - 5 = 2$ terms after $a_5$, we have
+        \begin{align*}
+            a_7 &= a_5 \cdot r^2 \\
+            &= 80 \times 4 = 320
+        \end{align*}
+        \vspace{-2em}
+    \end{solution}
+\end{boxexample}
+
+It turns out that things can get slightly more complicated if you are given two terms that are an even number of terms apart.
+
+\begin{boxexercise}
+    Let $\an$ be a geometric sequence. In each of the following cases, find the common ratio and the first term.
+    \begin{enumerate}
+        \item 
+    \end{enumerate}
+\end{boxexercise}
