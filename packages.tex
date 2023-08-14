@@ -73,9 +73,10 @@
 \newtheorem{example}[theorem]{Example}
 \newtheorem{wexample}[theorem]{Worked Example}
 \newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{hexercise}[theorem]{Challenge Problem}
 \newtheorem*{claim*}{Claim}
 \newenvironment{boxexample}{
-    \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]\begin{wexample}
+    \begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]\begin{wexample}
 }{
     \end{wexample}\end{tcolorbox}
 }
@@ -83,6 +84,11 @@
     \begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black]\begin{exercise}
 }{
     \end{exercise}\end{tcolorbox}
+} % colback=red!5!white,colframe=red!75!black
+\newenvironment{boxhexercise}{
+    \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]\begin{hexercise}
+}{
+    \end{hexercise}\end{tcolorbox}
 }
 \newenvironment{solution}{\begin{proof}[Solution]\renewcommand{\qedsymbol}{}}{\end{proof}}
 

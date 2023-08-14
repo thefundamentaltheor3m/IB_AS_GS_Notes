@@ -1,0 +1,40 @@
+\section{Geometric Sequences}
+
+\subsection{What is a Geometric Sequence?}
+
+\begin{definition}[Geometric Sequence]
+    A sequence $\an$ is said to be \textbf{geometric} if there exists some $r \in \R$ (called the \textbf{common ratio}) such that for all $n \in \N$,
+    \begin{align}
+        a_{n+1} &= r \cdot a_n
+    \end{align}
+\end{definition}
+In other words, multiplying any term in the sequence by $r$ gives the next term.
+
+\begin{boxexercise}[An Equivalent Characterisation]
+    Let $\an$ be a geometric sequence. Show that the $n$th term $a_n$ of the sequence is given by
+    \begin{align}
+        a_n &= a_1 \cdot r^{n - 1}
+    \end{align}
+\end{boxexercise}
+
+\subsection{Examples of Geometric Sequences}
+
+Geometric Sequences are as common as arithmetic sequences, and again, we have all seen them in numerous forms, even if we have not always realised it.
+
+\begin{example}
+    Each of the following is an example of a geometric sequence.\footnote{As with Arithmetic Sequences, we do not distinguish the sequences (ie, the respective $\N \to \R$ maps) from their terms.}
+    \begin{enumerate}
+        \item 
+    \end{enumerate}
+\end{example}
+
+\begin{boxhexercise}[The Relationship Between Arithmetic and Geometric Sequences]
+\hfill
+\begin{enumerate}
+    \item Find an example of a sequence $\an$ that is both arithmetic and geometric in nature.
+    \item Can you think of a way to convert any arithmetic sequence into a geometric sequence and any geometric sequence into an arithmetic sequence?
+    \begin{hint}
+        Can you think of a natural way of converting addition into multiplication? That is, can you think of a function $f : \R \to \R$ such that for all $a,b \in \R$, $\fof{a + b} = \fof{a} \fof{b}$? It would then be possible to construct a new sequence from an existing sequence by applying $f$ to every term. Furthermore, if it is possible to invert such an $f$, then it would be possible to convert multiplication back to addition.
+    \end{hint}
+\end{enumerate}
+\end{boxhexercise}

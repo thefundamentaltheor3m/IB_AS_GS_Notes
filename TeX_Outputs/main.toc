@@ -4,3 +4,6 @@
 \contentsline {subsection}{\numberline {2.1}What is an Arithmetic Sequence?}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Examples of Arithmetic Sequences}{3}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Sum of $n$ Terms of an Arithmetic Sequence}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Geometric Sequences}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}What is a Geometric Sequence?}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Examples of Geometric Sequences}{7}{subsection.3.2}%
