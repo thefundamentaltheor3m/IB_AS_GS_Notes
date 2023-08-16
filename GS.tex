@@ -82,9 +82,65 @@ In terms of exams, one can expect to see similar types of questions for arithmet
 
 It turns out that things can get slightly more complicated if you are given two terms that are an even number of terms apart.
 
+\begin{boxexample}
+    Let $\an$ be a geometric sequence with common ratio $r$. Given that $a_2 = 10$ and $a_6 = 160$, find $a_7$.
+    \begin{solution}
+        Since $a_6$ is $6 - 2 = 4$ terms away from $a_2$, one needs to multiply $a_2$ by $r$ \textit{four times} to get from $a_2$ to $a_6$. In mathematical terms, we have
+        \begin{align*}
+            a_6 &= a_2 \cdot r \cdot r \cdot r \cdot r \\
+            \iff r^4 &= \frac{160}{10} = 16 \\
+            \ergo \ r &= \pm \nthroot{4}{8} = \pm 2
+        \end{align*}
+        Therefore, $a_8 = a_6 \cdot r = \pm 320$.
+    \end{solution}
+\end{boxexample}
+
 \begin{boxexercise}
     Let $\an$ be a geometric sequence. In each of the following cases, find the common ratio and the first term.
     \begin{enumerate}
-        \item 
+        \item $a_5 = 20$, $a_6 = 100$
+        \item $a_3 = 40$, $a_5 = 120$
+        \item $a_4 = 40$, $a_6 = 120$
     \end{enumerate}
 \end{boxexercise}
+
+\subsection{Sum of $n$ Terms of an Geometric Sequence}
+
+The formula for the sum of $n$ terms of a geometric sequence comes from the following identity.
+
+\begin{boxexercise}
+    For all $x \in \R$ and $n \in \N$,
+    \begin{align}
+        x^{n + 1} - 1 &= \parenth{x - 1}\parenth{1 + x + x^2 + \cdots + x^{n-1} + x^n} \label{eq:id_xnp1-1}
+    \end{align}
+    \begin{hint}
+        Keep it simple. What's the most natural thing to do on the right-hand side?
+    \end{hint}
+\end{boxexercise}
+
+Notice that the term on the right-hand side of \eqref{eq:id_xnp1-1} is precisely $\parenth{x - 1}$ times the sum of the first $n$ terms of a geometric sequence with first term $1$ and common ratio $x$. So, we can derive the following formula.
+
+\begin{theorem}
+    Let $\an$ be a geometric sequence with common ratio $r$. Denote
+    \begin{align*}
+        S_n &:= \sum_{j=1}^n a_j = a_1 + a_2 + \cdots + a_n
+    \end{align*}
+    Then, for all $n \in \N$,
+    \begin{align}
+        S_n &=
+        \begin{cases}\displaystyle
+            a_1 \cdot \frac{r^n - 1}{r - 1} & \text{ if } r \neq 1 \\
+            a_1 \cdot n & \text{ if } r = 1
+        \end{cases}
+    \end{align}
+\end{theorem}
+\begin{proof}
+    We look at the cases $r = 1$ and $r \neq 1$ separately.
+    \begin{description}
+        \item[\underline{$r = 1$}.] In this case, the sequence is constant: $a_n = a_1$ for all $n$. Therefore,
+        \begin{align*}
+            S_n &= \underbrace{a_1 + a_1 + \cdots + a_1}_{n \text{ times}} = a_1n
+        \end{align*}
+        \item[\underline{$r \neq 1$}.] 
+    \end{description}
+\end{proof}
