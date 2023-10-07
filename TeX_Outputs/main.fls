@@ -1477,11 +1477,6 @@ INPUT GS.tex
 INPUT ./GS.tex
 INPUT ./GS.tex
 INPUT GS.tex
-INPUT ./IS
-INPUT ./IS
-INPUT IS
-INPUT ./IS
-INPUT IS
 INPUT TeX_Outputs/main.aux
 INPUT TeX_Outputs/main.out
 INPUT TeX_Outputs/main.out
