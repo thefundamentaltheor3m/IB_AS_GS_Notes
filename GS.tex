@@ -141,6 +141,27 @@ Notice that the term on the right-hand side of \eqref{eq:id_xnp1-1} is precisely
         \begin{align*}
             S_n &= \underbrace{a_1 + a_1 + \cdots + a_1}_{n \text{ times}} = a_1n
         \end{align*}
-        \item[\underline{$r \neq 1$}.] 
+        \item[\underline{$r \neq 1$}.] In this case, we have
+        \begin{align*}
+            S_n &= a_1 + a_1 r + a_1 r^2 + \cdots + a_1 r^{n-2} + r^{n-1} \\
+                &= a_1\parenth{1 + r + r^2 + \cdots + r^{n-2} + r^{n-1}} \\
+                &= a_1 \parenth{\frac{r^n - 1}{r - 1}} \quad \quad \text{(by rearranging \eqref{eq:id_xnp1-1})}
+        \end{align*}
     \end{description}
+    We therefore have the desired result.
 \end{proof}
+
+As with arithmetic sequences, the key to solving problems involving geometric sequences is \textbf{practice}. To that end, here are a few practice exercises.
+
+\begin{boxexercise}
+    Let $\an$ be a geometric sequence. In each of the following cases, find the sum of the first $n$ terms.
+    \begin{enumerate}[noitemsep]
+        \item $a_1 = 20$, $r = 2$, $n = 10$
+        \item $a_1 = 3$, $a_6 = \frac{81}{8}$, $n = 6$
+        \item $a_2 = 5$, $a_{4} = 125$, $n = 3$
+    \end{enumerate}
+    \begin{hint}
+        There can be more than one solution!
+    \end{hint}
+\end{boxexercise}
+

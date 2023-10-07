@@ -1,8 +1,8 @@
-PWD /Users/sidharth/Library/CloudStorage/OneDrive-ImperialCollegeLondon/Undergraduate Studies at Imperial College London/2- Year 2/Extra-Curricular/Elite IB Tutoring/My Notes/IB_AS_GS_Notes
+PWD /Users/sidharth/Library/CloudStorage/OneDrive-ImperialCollegeLondon/Undergraduate Studies at Imperial College London/Elite IB Tutoring/My Notes/IB_AS_GS_Notes
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/sidharth/Library/CloudStorage/OneDrive-ImperialCollegeLondon/Undergraduate Studies at Imperial College London/2- Year 2/Extra-Curricular/Elite IB Tutoring/My Notes/IB_AS_GS_Notes/main.tex
+INPUT /Users/sidharth/Library/CloudStorage/OneDrive-ImperialCollegeLondon/Undergraduate Studies at Imperial College London/Elite IB Tutoring/My Notes/IB_AS_GS_Notes/main.tex
 OUTPUT TeX_Outputs/main.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -1477,6 +1477,11 @@ INPUT GS.tex
 INPUT ./GS.tex
 INPUT ./GS.tex
 INPUT GS.tex
+INPUT ./IS
+INPUT ./IS
+INPUT IS
+INPUT ./IS
+INPUT IS
 INPUT TeX_Outputs/main.aux
 INPUT TeX_Outputs/main.out
 INPUT TeX_Outputs/main.out
